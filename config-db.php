@@ -12,7 +12,7 @@ if (preg_match('@^tcp://([\d.]+):(\d+)$@', getenv('DB_PORT'), $m)) {
   $dbserver=$m[1];
   $dbport=$m[2];
 } else {
-  $dbserver='';
-  $dbport='';
+  $dbserver=getenv('DB_HOST');
+  $dbport=getenv('DB_PORT');
 }
 $dbtype='mysql';
